@@ -4,14 +4,16 @@ using Bank_App_With_Team.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Bank_App_With_Team.Migrations
 {
     [DbContext(typeof(BankDBContext))]
-    partial class BankDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230720123057_addedIsActiveColumn")]
+    partial class addedIsActiveColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
