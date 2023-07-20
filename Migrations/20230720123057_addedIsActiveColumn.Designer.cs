@@ -4,14 +4,16 @@ using Bank_App_With_Team.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Bank_App_With_Team.Migrations
 {
     [DbContext(typeof(BankDBContext))]
-    partial class BankDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230720123057_addedIsActiveColumn")]
+    partial class addedIsActiveColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -86,11 +88,8 @@ namespace Bank_App_With_Team.Migrations
                     b.Property<DateTime>("ExpiereDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<long>("FullNumber")
-                        .HasColumnType("bigint");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                    b.Property<int>("FullNumber")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
