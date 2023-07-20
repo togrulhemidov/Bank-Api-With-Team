@@ -6,7 +6,7 @@ namespace Bank_App_With_Team.Entity
     {
         public int Id { get; set; }
 
-        public int FullNumber { get; set; }
+        public long FullNumber { get; set; }
 
         public int CardId { get; set; }
 
@@ -17,6 +17,7 @@ namespace Bank_App_With_Team.Entity
 
         public int CustomerId { get; set; }
 
+        public bool IsActive { get; set; }
 
         public DateTime  ExpiereDate { get; set; }
 
