@@ -4,14 +4,16 @@ using Bank_App_With_Team.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Bank_App_With_Team.Migrations
 {
     [DbContext(typeof(BankDBContext))]
-    partial class BankDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230719123615_dbInitialized")]
+    partial class dbInitialized
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,17 +47,13 @@ namespace Bank_App_With_Team.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("CashBack")
-                        .HasPrecision(14, 2)
-                        .HasColumnType("decimal(14,2)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Expiereyear")
                         .HasColumnType("int");
 
                     b.Property<int>("FirstEightNumber")
                         .HasColumnType("int");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
 
                     b.HasKey("id");
 

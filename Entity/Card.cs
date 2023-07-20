@@ -10,10 +10,11 @@ namespace Bank_App_With_Team.Entity
         public int BankId { get; set; }
 
         public int FirstEightNumber { get; set; }
-
+        
         public decimal  CashBack { get; set; }
 
         public int Expiereyear { get; set; }
+        public bool IsActive { get; set; }
 
         public Bank Bank { get; set; }
 
